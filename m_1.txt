@@ -1,0 +1,51 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A, B):
+    # write your code in Python 3.6
+    pass
+
+
+====
+Compilation successful.
+
+Example test:   ('rather', 'harder')
+WRONG ANSWER (got 6 expected 2)
+
+Example test:   ('apple', 'pear')
+OK
+
+Example test:   ('lemon', 'melon')
+WRONG ANSWER (got 4 expected 0)
+
+Detected some errors.
+=====
+def solution(a, b):
+    a_l = list(a)
+    b_l = list(b)
+
+    for i in a_l:
+        if i in b_l:
+            b_l.remove(i)
+            a_l.remove(i)
+    return len(a_l) + len(b_l)
+
+======
+
+def solution(a, b):
+    a_l = list(a)
+    b_l = list(b)
+    length = len(a_l)
+    i = 0
+    while i < length:
+        if a_l[i] in b_l:
+            b_l.remove(a_l[i])
+            a_l.pop(i)
+            length -= 1
+            i -= 1
+        i += 1
+    return len(a_l) + len(b_l)
+
+
+
+

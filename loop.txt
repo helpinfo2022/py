@@ -1,0 +1,53 @@
+===========
+=====1=====
+Write a function modify_list() that takes a list of integers as input, removes all odd numbers from it, divides even numbers on 2, and returns the integer part of the result. The function should not return anything, it only needs to change the passed list.
+
+def modify_list(lst):
+    new_list=[]
+    for i in lst:
+        if (i % 2) == 0:
+            new_list.append(i/2)
+    print(new_list)
+
+lst=[55,77,8,6]
+modify_list(lst)
+
+===========
+=====2=====
+Write a function in Python that accepts two string parameters.
+
+The first parameter will be a string of characters, and the second parameter will be the same string of characters, but they’ll be in a different order and have one extra character.
+
+
+def DiffTwoStrings(first_string, second_string):
+    result = []
+    for i in sorted(second_string):
+        if i in sorted(first_string):
+            pass
+        else:
+            result.append(i)
+    print(result)
+
+first_string="hello"
+second_string="lehlgo"
+DiffTwoStrings(first_string, second_string)
+
+
+
+
+===========
+=====3=====
+
+Create a function that accepts a string. The function should return a string, with each character in the original string doubled.
+
+def repeat_the_characters(word):
+    result = ''
+    for i in word:
+        result = result + i + i
+    print(result)
+
+word="artem"
+repeat_the_characters(word)
+
+===========
+===========

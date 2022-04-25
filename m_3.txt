@@ -1,0 +1,35 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(S):
+    # write your code in Python 3.6
+    pass
+
+
+====
+
+def solution(S: str):
+    S = S.split('.')
+    k = []
+    for i in S:
+        k.extend([j for j in i.split('?')])
+    S = []
+    for i in k:
+        S.extend([j for j in i.split('?')])
+
+    max = 0
+    for i in S:
+        n = [i for i in i.strip().split(' ') if len(i) > 0]
+        if len(n) > max:
+            max = len(n)
+    return max
+
+
+====
+
+
+
+
+
+
+
